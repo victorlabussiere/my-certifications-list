@@ -3,7 +3,46 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply w-screen flex flex-col items-center
+  body > div#root {
+    @apply w-full px-0 m-0 box-border
+  }
+}
+
+/* mobile sizes */
+@layer components {
+  .sm_section {
+    @apply py-2 w-[100%]
+  }
+  .sm_header {
+    @apply w-full flex flex-col gap-2 px-4;
+    /* @apply px-4 py-3 shadow-lg */
+  }
+
+  .sm_header h1{
+    @apply text-2xl font-semibold
+  }
+
+  .sm_queryArea {
+    @apply h-[40px]
+  }
+
+  .sm_input {
+    @apply text-sm p-2 w-[72%]
+  }
+
+  .sm_Card {
+    @apply gap-1 p-4
+  }
+
+  .sm_cardTitle {
+    @apply text-[16px] font-semibold max-w-[88%]
+  }
+
+  .sm_cartCompetencesList {
+    @apply px-2 text-[14px]
+  }
+
+  .sm_cardComps {
+    @apply text-[12px] px-2
   }
 }

@@ -6,10 +6,13 @@ export function CertificationCard<T extends Certification> (prop: {
   function resolveCompetenciesText (com: string) {
     let items: string[] = com.split('·')
     return (
-      <ul className='divide-y divide-dashed gap-1'>
+      <ul className='divide-y divide-dashed gap-1 list-disc list-inside'>
         {items.map((e, i) => {
           return (
-            <li className='py-1 hover:ml-1 duration-300' key={i + 1}>
+            <li
+              className='max-[425px]:sm_cardComps text-gray-500 py-1 hover:ml-1 duration-300'
+              key={i + 1}
+            >
               {e}
             </li>
           )
@@ -19,12 +22,17 @@ export function CertificationCard<T extends Certification> (prop: {
   }
 
   return (
-    <a href={prop.element.link} target='_blank' className='flex flex-col gap-3'>
-      <p className='text-xl text-ellipsis max-w-[80%] truncate font-semibold hover:underline duration-200'>
+    <a
+      href={prop.element.link}
+      target='_blank'
+      // className='flex flex-col gap-3 w-full'
+      className='flex flex-col max-[425px]:sm_Card'
+    >
+      <p className='max-[425px]:sm_cardTitle text-sky-900 truncate'>
         {prop.element.text}
       </p>
-      <span className='text-sky-900/80 w-fit px-5'>
-        <i className='font-semibold'>Competências aprendidas: </i>
+      <span className='max-[425px]:sm_cartCompetencesList text-sky-900/80 flex flex-col gap-2'>
+        <i className=''>Competências aprendidas: </i>
         {resolveCompetenciesText(prop.element.competences)}
       </span>
     </a>

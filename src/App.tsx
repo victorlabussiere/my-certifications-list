@@ -1,7 +1,7 @@
 import json from '../certificados.json'
 import { useState } from 'react'
-import { CertificationsList } from './components/CertificationsList'
 import { QueryInput, ResetButton } from './components/Layout'
+import { CertificationCard } from './components/CertificationCard'
 
 export default function App () {
   let [certifications, setCertifications] = useState(json.sort())
@@ -12,19 +12,31 @@ export default function App () {
     q!.value = ''
   }
 
+  let displayResetBtn = certifications.length < json.length
+
   return (
-    <div className='bg-white shadow-2xl rounded-xl m-5 text-sky-900 py-3 pb-6'>
-      <header className='flex items-center w-full justify-start gap-3 px-6 py-4 min-w-[40vw]'>
-        <h1 className='text-3xl font-semibold min-w-fit mr-8'>Certificados</h1>
-        <QueryInput
-          json={json}
-          setCertifications={json => setCertifications(json.sort())}
-        />
-        {certifications.length < json.length && (
-          <ResetButton onClick={resetList} />
-        )}
+    <section className='max-[425px]:sm_section flex flex-col gap-3'>
+      <header className='max-[425px]:sm_header bg-white'>
+        <h1 className='text-sky-900'>Certificados</h1>
+        <span className='max-[425px]:sm_queryArea flex gap-3 items-center'>
+          <QueryInput j={json} setCertifications={j => setCertifications(j)} />
+          {displayResetBtn && <ResetButton onClick={resetList} />}
+        </span>
       </header>
-      <CertificationsList certifications={certifications.sort()} />
-    </div>
+
+      <ul className='w-full divide-y border-t-2 border-t-sky-900/40'>
+        {certifications.map((e, i) => {
+          return (
+            <li
+              key={i + 1}
+              // className='w-full py-3 px-8 hover:text-teal-600 hover:bg-gray-300/10 flex flex-col gap-2 cursor-pointer'
+              className='hover:text-teal-600 hover:bg-teal-300/10'
+            >
+              <CertificationCard element={e} />
+            </li>
+          )
+        })}
+      </ul>
+    </section>
   )
 }

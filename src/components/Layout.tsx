@@ -1,20 +1,19 @@
 import { Certification } from '../types/Certification'
 
-export function QueryInput ({
-  json,
-  setCertifications
-}: {
-  json: Certification[]
+export type QueryInputProps = {
+  j: Certification[]
   setCertifications: (cert: Certification[]) => void
-}) {
+}
+
+export function QueryInput ({ j, setCertifications }: QueryInputProps) {
   return (
     <input
       id='queryInput'
-      className='border p-2 rounded h-fit w-full'
+      className='text-sky-900/90 border rounded border-sky-900 max-[425px]:sm_input'
       type='text'
       onChange={({ target }) => {
         setCertifications(
-          json
+          j
             .filter(e =>
               e.text
                 .trim()
@@ -33,7 +32,7 @@ export function ResetButton ({ onClick }: { onClick: () => void }) {
   return (
     <div
       role='button'
-      className='text-white bg-slate-700 text-center rounded py-2 w-[20%] font-semibold'
+      className='w-fit px-4 py-2 bg-sky-900 text-white rounded font-semibold hover:bg-sky-900/80 duration-150 cursor-pointer'
       onClick={() => onClick()}
     >
       reset
