@@ -9,17 +9,16 @@
 }
 
 /* mobile sizes */
-@layer components {
+@layer utilities {
   .sm_section {
     @apply py-2 w-[100%]
   }
   .sm_header {
-    @apply w-full flex flex-col gap-2 px-4;
-    /* @apply px-4 py-3 shadow-lg */
+    @apply w-full flex flex-col items-start gap-2 px-4;
   }
 
   .sm_header h1{
-    @apply text-2xl font-semibold
+    @apply text-2xl
   }
 
   .sm_queryArea {
@@ -27,10 +26,10 @@
   }
 
   .sm_input {
-    @apply text-sm p-2 w-[72%]
+    @apply text-sm p-1 w-[72%]
   }
 
-  .sm_Card {
+  .sm_card {
     @apply gap-1 p-4
   }
 
@@ -44,5 +43,41 @@
 
   .sm_cardComps {
     @apply text-[12px] px-2
+  }
+}
+
+/* md sizes */
+@layer utilities {
+
+  .md_section {
+    @apply py-4 w-full
+  }
+
+  .md_header {
+    @apply p-3 flex gap-10 items-center justify-start
+  }
+
+  .md_header h1 {
+    @apply text-3xl
+  }
+
+  .md_queryArea {
+    @apply w-full
+  }
+
+  .md_input {
+    @apply min-w-[70%] p-2
+  }
+
+  .md_card {
+    @apply px-4 py-2
+  }
+
+  .md_card p {
+    @apply text-[18px] font-semibold mb-4
+  }
+
+  .md_card span {
+    @apply text-[16px]
   }
 }

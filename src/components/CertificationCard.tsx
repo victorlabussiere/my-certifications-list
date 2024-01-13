@@ -26,9 +26,9 @@ export function CertificationCard<T extends Certification> (prop: {
       href={prop.element.link}
       target='_blank'
       // className='flex flex-col gap-3 w-full'
-      className='flex flex-col max-[425px]:sm_Card'
+      className='flex flex-col max-[425px]:sm_card max-[768px]:md_card'
     >
-      <p className='max-[425px]:sm_cardTitle text-sky-900 truncate'>
+      <p className='max-[425px]:sm_cardTitle text-sky-900 max-w-[80%] truncate'>
         {prop.element.text}
       </p>
       <span className='max-[425px]:sm_cartCompetencesList text-sky-900/80 flex flex-col gap-2'>
