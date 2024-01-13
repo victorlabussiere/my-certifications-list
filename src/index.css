@@ -124,3 +124,23 @@
     @apply text-[16px]
   }
 }
+
+/* xg sizes */
+@layer utilities {
+
+  .xg_section {
+    @apply max-w-[60vw] w-[60vw] shadow-2xl mx-auto my-6 rounded-2xl max-h-[96vh]
+  }
+
+  .xg_cardsList {
+    @apply overflow-y-auto
+  }
+
+  .xg_cardsList::-webkit-scrollbar {
+    @apply bg-sky-900/10 px-1
+  }
+
+  .xg_cardsList::-webkit-scrollbar-thumb {
+    @apply rounded bg-sky-900/30
+  }
+}
