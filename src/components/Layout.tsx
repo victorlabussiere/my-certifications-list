@@ -9,7 +9,7 @@ export function QueryInput ({ j, setCertifications }: QueryInputProps) {
   return (
     <input
       id='queryInput'
-      className='text-sky-900/90 border rounded border-sky-900 max-[425px]:sm_input max-[768px]:md_input'
+      className='text-sky-900/90 border rounded border-sky-900 min-[320px]:sm_input sm:md_input md:lg_input'
       type='text'
       onChange={({ target }) => {
         setCertifications(
@@ -32,7 +32,7 @@ export function ResetButton ({ onClick }: { onClick: () => void }) {
   return (
     <div
       role='button'
-      className='max-[425px]:py-1 w-fit px-4 py-2 bg-sky-900 text-white rounded font-semibold hover:bg-sky-900/80 duration-150 cursor-pointer'
+      className='min-[320px]:py-1 w-fit px-4 py-2 bg-sky-900 text-white rounded font-semibold hover:bg-sky-900/80 duration-150 cursor-pointer'
       onClick={() => onClick()}
     >
       reset

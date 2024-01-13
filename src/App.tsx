@@ -15,10 +15,10 @@ export default function App () {
   let displayResetBtn = certifications.length < json.length
 
   return (
-    <section className='max-[425px]:sm_section max-[768px]:md_section flex flex-col gap-3'>
-      <header className='max-[425px]:sm_header max-[768px]:md_header bg-white'>
+    <section className='min-[320px]:sm_section sm:md_section md:lg_section flex flex-col gap-3 max-w-screen'>
+      <header className='flex flex-col min-[320px]:sm_header sm:md_header md:lg_header bg-white'>
         <h1 className='text-sky-900 font-semibold'>Certificados</h1>
-        <span className='max-[425px]:sm_queryArea max-[768px]:md_queryArea flex gap-3 items-center'>
+        <span className='min-[365px]:sm_queryArea max-[768px]:md_queryArea max-[1024px]:lg_queryArea flex gap-3 items-center'>
           <QueryInput j={json} setCertifications={j => setCertifications(j)} />
           {displayResetBtn && <ResetButton onClick={resetList} />}
         </span>

@@ -22,22 +22,22 @@
   }
 
   .sm_queryArea {
-    @apply h-[40px]
+    @apply h-[40px] w-full
   }
 
   .sm_input {
-    @apply text-sm p-1 w-[72%]
+    @apply text-sm p-1 w-[100%]
   }
 
   .sm_card {
     @apply gap-1 p-4
   }
 
-  .sm_cardTitle {
+  .sm_card p {
     @apply text-[16px] font-semibold max-w-[88%]
   }
 
-  .sm_cartCompetencesList {
+  .sm_card span {
     @apply px-2 text-[14px]
   }
 
@@ -54,7 +54,7 @@
   }
 
   .md_header {
-    @apply p-3 flex gap-10 items-center justify-start
+    @apply p-3 flex-row gap-10 items-center justify-start
   }
 
   .md_header h1 {
@@ -78,6 +78,49 @@
   }
 
   .md_card span {
+    @apply text-[16px]
+  }
+}
+
+/* lg sizes */
+@layer utilities {
+
+  .lg_section {
+   @apply px-6 
+  }
+  .lg_header {
+    @apply p-4 flex items-center justify-between
+  }
+
+  .lg_header h1 {
+    @apply text-4xl font-bold
+  }
+
+  .lg_queryArea {
+    @apply w-[50%]
+  }
+
+  .lg_input {
+    @apply w-full p-2
+  }
+
+  .lg_card {
+    @apply p-4
+  }
+
+  .lg_card p {
+    @apply text-xl font-semibold mb-3
+  }
+
+  .lg_card span i {
+    @apply text-[16px]
+  }
+
+  .lg_cardComp {
+    @apply flex flex-wrap divide-y-0 gap-x-6
+  }
+
+  .lg_cardCompItem {
     @apply text-[16px]
   }
 }
