@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import json from '../certificados.json'
-import { Certification } from './types/Certification'
-import { CertificationsList, ResetButton } from './components/HomeComponents'
+import { useState } from 'react'
+import { CertificationsList } from './components/CertificationsList'
+import { QueryInput, ResetButton } from './components/Layout'
 
 export default function App () {
   let [certifications, setCertifications] = useState(json.sort())
@@ -12,11 +12,9 @@ export default function App () {
     q!.value = ''
   }
 
-  json.forEach(e => e.text.trim())
-
   return (
-    <div className='bg-white shadow-2xl rounded-xl m-5 text-sky-900'>
-      <div className='flex items-center w-full justify-start gap-3 px-6 py-4 min-w-[40vw]'>
+    <div className='bg-white shadow-2xl rounded-xl m-5 text-sky-900 py-3 pb-6'>
+      <header className='flex items-center w-full justify-start gap-3 px-6 py-4 min-w-[40vw]'>
         <h1 className='text-3xl font-semibold min-w-fit mr-8'>Certificados</h1>
         <QueryInput
           json={json}
@@ -25,34 +23,8 @@ export default function App () {
         {certifications.length < json.length && (
           <ResetButton onClick={resetList} />
         )}
-      </div>
+      </header>
       <CertificationsList certifications={certifications.sort()} />
     </div>
-  )
-}
-
-export function QueryInput ({
-  json,
-  setCertifications
-}: {
-  json: Certification[]
-  setCertifications: (cert: Certification[]) => void
-}) {
-  return (
-    <input
-      id='queryInput'
-      className='border p-2 rounded h-fit w-full'
-      type='text'
-      onChange={({ target }) => {
-        setCertifications(
-          json
-            .filter(e =>
-              e.text.trim().toLowerCase().includes(target.value.toLowerCase())
-            )
-            .sort()
-        )
-      }}
-      placeholder='Pesquise por tech'
-    />
   )
 }
