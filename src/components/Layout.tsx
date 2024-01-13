@@ -16,7 +16,10 @@ export function QueryInput ({
         setCertifications(
           json
             .filter(e =>
-              e.text.trim().toLowerCase().includes(target.value.toLowerCase())
+              e.text
+                .trim()
+                .toLowerCase()
+                .includes(target.value.trim().toLowerCase())
             )
             .sort()
         )
