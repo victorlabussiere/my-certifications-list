@@ -1,5 +1,55 @@
 [
   {
+    "text": "ASP.NET Core in .NET 6: Dependency Injection",
+    "link": "https://www.linkedin.com/learning/certificates/acf2c0812d7ef30094b2be9d4eb6614a72a330396e2af657a116b7ac0b13f1de",
+    "competences": "Dependency Injection"
+  },
+  {
+    "text": "ASP.NET: Security",
+    "link": "https://www.linkedin.com/learning/certificates/161912d0d989c3c3ecc0c1aec249e721ac208021bba314af46f6de902d96f5fc",
+    "competences": "Web Application Security"
+  },
+  {
+    "text": "Building Web APIs with ASP.NET Core in .NET",
+    "link": "https://www.linkedin.com/learning/certificates/4e727c307aa057afe92917ebf166c8833df7674fb2f9d276073d9e4b9378215e",
+    "competences": "ASP.NET Core"
+  },
+  {
+    "text": "Introducing ASP.NET Core",
+    "link": "https://www.linkedin.com/learning/certificates/a4a462e90694065c22f64cadfeb0b6101678e21f80b4c5dc839176c85ae06f2c",
+    "competences": "ASP.NET Core"
+  },
+  {
+    "text": "Introducing Entity Framework",
+    "link": "https://www.linkedin.com/learning/certificates/77d5a034c4f88f36cf57b7366114261df8b280444a91934a1e3390b7399a1f33",
+    "competences": "Entity Framework"
+  },
+  {
+    "text": "Learning ASP.NET",
+    "link": "https://www.linkedin.com/learning/certificates/60b30b16555586c6bda4bcf3a354290ace2f783d060f17388d5cf81a5ea7c77d",
+    "competences": "ASP.NET"
+  },
+  {
+    "text": "Learning C#",
+    "link": "https://www.linkedin.com/learning/certificates/0972257b23ff19c74170aeba7c9e5930a9802d90ef0a348019c50d0eb9d1d951",
+    "competences": "C#"
+  },
+  {
+    "text": "Learning Entity Framework Core",
+    "link": "https://www.linkedin.com/learning/certificates/5066444e09c540a03b8faa3f80bf6254501bb992f63487e18a2b2d6f19e6091d",
+    "competences": "Entity Framework"
+  },
+  {
+    "text": "Practical Application Architecture with Entity Framework Core",
+    "link": "https://www.linkedin.com/learning/certificates/aa2a0f09634312776d363bf8f1c67ec39839bfa891325c15d134f13d8940ee55",
+    "competences": "Entity Framework"
+  },
+  {
+    "text": "Securing ASP.NET Core Apps: Advanced Techniques for Web Application Security",
+    "link": "https://www.linkedin.com/learning/certificates/84c9df52552ff03e88c5abd88f195544eaef4dd33d61811e614958509fa98ccc",
+    "competences": "ASP.NET Core · Web Application Security"
+  },
+  {
     "text": "Extending, Securing, and Dockerizing Spring Boot Microservices",
     "link": "https://www.linkedin.com/learning/certificates/37a6a13990b88f9024f197d1de714891e0ff79f444a304313287fc23ea71b1ad",
     "competences": "Microservices · Spring Boot · Docker Products"
